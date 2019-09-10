@@ -1,0 +1,23 @@
+{
+  "default": "sr1",
+  "root": "app/subroute/views",
+  "routes": [
+    {
+      "title": "Sub Route 1",
+      "view": "sr1",
+      "parameters": {
+        "id": 100
+      }
+    },
+    {
+      "title": "Sub Route 2",
+      "view": "sr2",
+      "html-only": true
+    },
+    {
+      "title": "Sub Route 3",
+      "view": "sr3",
+      "html-only": true
+    }
+  ]
+}

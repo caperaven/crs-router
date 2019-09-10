@@ -1,0 +1,36 @@
+{
+  "default": "welcome",
+  "root": "app",
+  "auto-nav": true,
+  "routes": [
+    {
+      "title": "Welcome",
+      "hash": "#wel",
+      "view": "welcome",
+      "parameters": {
+        "id": 100
+      }
+    },
+    {
+      "title": "About",
+      "hash": "#about",
+      "view": "about"
+    },
+    {
+      "title": "Content Page 1",
+      "hash": "#content1",
+      "view": "content-page1"
+    },
+    {
+      "title": "Static",
+      "hash": "#static",
+      "view": "static",
+      "html-only": true
+    },
+    {
+      "title": "Subroute",
+      "hash": "#sub",
+      "view": "subroute"
+    }
+  ]
+}
