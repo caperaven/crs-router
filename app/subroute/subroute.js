@@ -1,4 +1,4 @@
-import "./../../src/crs-router.js";
+import "./../../publish/src/crs-router.js";
 
 export default class SubRoute {
     connectedCallback() {
