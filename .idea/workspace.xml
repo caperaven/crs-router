@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/publish.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/publish.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publish/package.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +29,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build/publish.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -33,6 +38,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\caperaven-projects\crs-router" />
       <recent name="D:\projects\caperaven-projects\crs-router\build" />
     </key>
   </component>
@@ -49,32 +55,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Node.js.publish">
-    <configuration name="bmw-router goto 404" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/bmw-router.test.js" />
-      <test-names>
-        <test-name value="bmw-router goto 404" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="bmw-router lifecycle" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/bmw-router.test.js" />
-      <test-names>
-        <test-name value="bmw-router lifecycle" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="bmw-url-provider _hashChanged same url" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -88,23 +68,40 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="bmw-url-provider _hashChanged" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/bmw-url-provider.test.js" />
-      <test-names>
-        <test-name value="bmw-url-provider _hashChanged" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/bmw-router/coverage/lcov-report/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="publish" type="NodeJSConfigurationType" path-to-js-file="build/publish.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="bundle" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="bundle" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="publish" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="publish" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -120,19 +117,19 @@
     <list>
       <item itemvalue="JavaScript Debug.index.html" />
       <item itemvalue="Jest.bmw-url-provider _hashChanged same url" />
-      <item itemvalue="Jest.bmw-url-provider _hashChanged" />
-      <item itemvalue="Jest.bmw-router lifecycle" />
-      <item itemvalue="Jest.bmw-router goto 404" />
       <item itemvalue="Node.js.publish" />
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.publish" />
+      <item itemvalue="npm.bundle" />
+      <item itemvalue="npm.build" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.bundle" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.publish" />
         <item itemvalue="npm.test" />
         <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="Jest.bmw-router goto 404" />
-        <item itemvalue="Jest.bmw-router lifecycle" />
-        <item itemvalue="Jest.bmw-url-provider _hashChanged" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +150,16 @@
       <workItem from="1567935364659" duration="1105000" />
       <workItem from="1568008120923" duration="429000" />
       <workItem from="1568105056688" duration="465000" />
-      <workItem from="1568115908172" duration="226000" />
+      <workItem from="1568115908172" duration="243000" />
+      <workItem from="1568116312097" duration="84000" />
+      <workItem from="1568129039215" duration="188000" />
+      <workItem from="1568230250360" duration="215000" />
+      <workItem from="1569186498094" duration="330000" />
+      <workItem from="1569319741730" duration="14000" />
+      <workItem from="1569320009675" duration="123000" />
+      <workItem from="1570046861738" duration="769000" />
+      <workItem from="1570173109930" duration="428000" />
+      <workItem from="1570177384269" duration="1829000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -274,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568110189284</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="publishing">
+      <created>1568116141191</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1568116141191</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -326,7 +339,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

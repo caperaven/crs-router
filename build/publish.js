@@ -2,13 +2,11 @@ const fs = require("fs");
 const mkdirp = require("mkdirp");
 const glob = require("glob");
 const path = require("path");
-const babel = require('@babel/core');
-const minifyPreset = require('babel-preset-minify');
 
 class Publish {
     static async distribute() {
         const instance = new Publish();
-        instance.copyFiles("./src/**/*.*");
+        instance.copyFiles("./dist/*.*");
         instance.bumpVersion();
     }
     
@@ -19,21 +17,10 @@ class Publish {
     async copyFiles(query) {
         const files = await this.getFiles(query);
         for (let file of files) {
-            const target = path.dirname(file).split("./").join("./publish/");
+            const target = "./publish/"; //path.dirname(file).split("./").join("./publish/");
             const fileName = path.basename(file);
             this.initFolder(target);
-            //fs.copyFileSync(file, `${target}/${fileName}`);
-            const code = fs.readFileSync(file);
-
-            const result = babel.transformSync(code, {
-                minified: true,
-                sourceType: "module",
-                configFile: false,
-                presets: [[minifyPreset]],
-                plugins: ["@babel/plugin-syntax-dynamic-import"]
-            });
-
-            fs.writeFileSync(`${target}/${fileName}`, result.code);
+            fs.copyFileSync(file, `${target}/${fileName}`);
         }
     }
 
