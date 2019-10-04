@@ -7,6 +7,7 @@ class Publish {
     static async distribute() {
         const instance = new Publish();
         instance.copyFiles("./dist/*.*");
+        instance.copyFiles("./readme.md");
         instance.bumpVersion();
     }
     

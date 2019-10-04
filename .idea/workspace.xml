@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/publish.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/publish.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -120,9 +122,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.bundle" />
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.publish" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.bundle" />
         <item itemvalue="npm.test" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
@@ -154,7 +156,7 @@
       <workItem from="1569320009675" duration="123000" />
       <workItem from="1570046861738" duration="769000" />
       <workItem from="1570173109930" duration="428000" />
-      <workItem from="1570177384269" duration="4860000" />
+      <workItem from="1570177384269" duration="5480000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -289,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570179225237</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="documentation">
+      <created>1570182258688</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1570182258688</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -355,7 +364,8 @@
     <MESSAGE value="added tests" />
     <MESSAGE value="updated hash to be different to view" />
     <MESSAGE value="publishing" />
-    <option name="LAST_COMMIT_MESSAGE" value="publishing" />
+    <MESSAGE value="documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="documentation" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

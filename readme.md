@@ -1,5 +1,4 @@
 #Bare metal web router
-Please note that this component is free for non commercial use.
 This is a vanilla web component quickly enabling loading of views in SPA applications.
 
 ## Usage
@@ -210,7 +209,13 @@ So the values of the select match the route's view property.
 The parameters property defined in the route defines default parameters for the route.
 This is not required in the routes.json file.
 
+if you implement the "parametersChanged" function as shown above, this will be called when the navigation occurs and pass the URL parameters to the view.
+
 ### html-only
 
+Not all views need logic, static html pages are also supported in the navigation.
+Since this router is convention driven it will ask for a javascript file unless you tell it explicitly that this is html only.
+
+See the "Sub Route 2" and "Sub Route 3" routes as examples of this.
 
  
