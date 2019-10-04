@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="documentation">
+    <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/subroute/subroute.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/subroute/subroute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,10 +121,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.publish" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.bundle" />
-        <item itemvalue="npm.test" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
@@ -154,7 +155,9 @@
       <workItem from="1569320009675" duration="123000" />
       <workItem from="1570046861738" duration="769000" />
       <workItem from="1570173109930" duration="428000" />
-      <workItem from="1570177384269" duration="7460000" />
+      <workItem from="1570177384269" duration="8418000" />
+      <workItem from="1570185931669" duration="5000" />
+      <workItem from="1570187659325" duration="125000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -310,40 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1570183011303</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="documentation">
+      <created>1570184856641</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1570184856641</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="bmw-router_lifecycle - 2019.09.07 at 18h 17m 18s.xml">
-      <configuration name="bmw-router lifecycle" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="bmw-router_lifecycle - 2019.09.07 at 18h 20m 00s.xml">
-      <configuration name="bmw-router lifecycle" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="bmw-router_lifecycle - 2019.09.07 at 18h 20m 58s.xml">
-      <configuration name="bmw-router lifecycle" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="bmw-router_lifecycle - 2019.09.07 at 18h 22m 17s.xml">
-      <configuration name="bmw-router lifecycle" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="bmw-router_lifecycle - 2019.09.07 at 18h 22m 20s.xml">
-      <configuration name="bmw-router lifecycle" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="bmw-router_lifecycle - 2019.09.07 at 18h 22m 58s.xml">
-      <configuration name="bmw-router lifecycle" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="bmw-router_goto_404 - 2019.09.07 at 18h 32m 06s.xml">
-      <configuration name="bmw-router goto 404" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="bmw-router_goto_404 - 2019.09.07 at 18h 33m 04s.xml">
-      <configuration name="bmw-router goto 404" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="bmw-router_lifecycle - 2019.09.07 at 18h 33m 47s.xml">
-      <configuration name="bmw-router lifecycle" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="bmw-router_goto_404 - 2019.09.07 at 18h 33m 51s.xml">
-      <configuration name="bmw-router goto 404" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

@@ -1,5 +1,3 @@
-import "./../../publish/src/crs-router.js";
-
 export default class SubRoute {
     connectedCallback() {
         this.select = this.element.querySelector("select");
