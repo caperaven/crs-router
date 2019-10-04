@@ -1,6 +1,12 @@
 #Bare metal web router
 This is a vanilla web component quickly enabling loading of views in SPA applications.
 
+## Install
+
+```
+npm install --save crs-router
+```
+
 ## Usage
 Since this is a web component, add html markup in the location your require the routing to take place.
 
@@ -83,13 +89,20 @@ http://127.0.0.1:8000/#wel?id=100&name=me
 
 the params object will be.
 
-The last but important part to note about the view javascript is that the class is expoted as default.
-
-```js
+```Javascript
 {
     id: "100",
     name: "me"
 }
+```
+
+Please note that the class is exported as default.
+
+There are some cases when you want access to the HTML element that is the view of the given view model.
+Each view model has a element property that you can query the view's content on.
+
+```js
+    this.element.querySelector(...);
 ```
 
 ### View html
@@ -103,7 +116,7 @@ There is nothing special about the view HTML, just add the HTML you want to disp
 </p>
 ```
 
-## routes.json
+## Routes.json
 
 Here is a example of a routes json file
 
@@ -135,7 +148,7 @@ Here is a example of a routes json file
 1. auto-nav - when navigating too this view should the parameters be populated in the url as defined in te configuration
 1. routes - definition of what routes are available
 
-## sub routes
+## Sub routes
 
 Let say I want to define a sub route. 
 My main view is a view called subroute in the app folder.  
@@ -204,18 +217,39 @@ nav(event) {
 
 So the values of the select match the route's view property.
 
-### route parameters
+### Route parameters
 
 The parameters property defined in the route defines default parameters for the route.
 This is not required in the routes.json file.
 
 if you implement the "parametersChanged" function as shown above, this will be called when the navigation occurs and pass the URL parameters to the view.
 
-### html-only
+### Html only
 
 Not all views need logic, static html pages are also supported in the navigation.
 Since this router is convention driven it will ask for a javascript file unless you tell it explicitly that this is html only.
 
 See the "Sub Route 2" and "Sub Route 3" routes as examples of this.
 
+## Prevent route change
+There are cases when you don't want to navigate away from your current view or you only allow navigating back to a expected route.
+To do this you can add a function to your view model.
+
+```js
+export default class About {
+    canLeave(hash, parameters) {
+        return hash === "#wel";
+    }
+}
+```
+
+If "canLeave" returns false navigation will not happen.
+So if your data is in a dirty state and you want the user to first save before they leave the view, this is how you would do that.
  
+## Example
+You can find a example application on github.  
+https://github.com/caperaven/crs-router-example
+
+If you have any feature requests or bug reports you are welcome to post them there.
+
+
