@@ -145,8 +145,18 @@ Here is a example of a routes json file
 
 1. default - what is the default view to load when the router is initialized
 1. root - what is the folder path where the views in this configuration's routes can be found
-1. auto-nav - when navigating too this view should the parameters be populated in the url as defined in te configuration
+1. auto-nav - auto navigate on url change
 1. routes - definition of what routes are available
+
+## Auto nav
+
+When the auto-nav property is set to true, it will monitor the url of the browser and automatically perform navigation when the url changes.
+If it is false it will no, and you need to perform navigation in one of two ways.
+
+1. Set the view attribute on the component to the view name
+1. Use the goto function on the component passing on the new name as a parameter.
+
+In most cases you want to set auto-nave to true. 
 
 ## Sub routes
 
