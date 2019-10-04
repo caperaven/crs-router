@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,9 +120,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.publish" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="npm.test" />
-        <item itemvalue="npm.publish" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.bundle" />
       </list>
@@ -156,7 +156,7 @@
       <workItem from="1570173109930" duration="428000" />
       <workItem from="1570177384269" duration="8418000" />
       <workItem from="1570185931669" duration="5000" />
-      <workItem from="1570187659325" duration="1486000" />
+      <workItem from="1570187659325" duration="1615000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -326,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570187809301</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="documentation">
+      <created>1570189179632</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1570189179632</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView">
