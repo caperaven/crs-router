@@ -4,7 +4,7 @@ export default [
     {
         input: "src/index.js",
         output: [
-            {file: 'dist/crs-router.esm.js', format: 'es'}
+            {file: 'dist/crs-router.js', format: 'es'}
         ],
         plugins: [
             terser()

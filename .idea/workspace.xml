@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,13 +110,13 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JavaScript Debug.index.html (1)" />
       <item itemvalue="Jest.bmw-url-provider _hashChanged same url" />
       <item itemvalue="Node.js.publish" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.publish" />
       <item itemvalue="npm.bundle" />
       <item itemvalue="npm.build" />
-      <item itemvalue="JavaScript Debug.index.html (1)" />
     </list>
     <recent_temporary>
       <list>
@@ -156,7 +156,9 @@
       <workItem from="1570173109930" duration="428000" />
       <workItem from="1570177384269" duration="8418000" />
       <workItem from="1570185931669" duration="5000" />
-      <workItem from="1570187659325" duration="1615000" />
+      <workItem from="1570187659325" duration="1657000" />
+      <workItem from="1570189331003" duration="6000" />
+      <workItem from="1570428694467" duration="37000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -333,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570189179632</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="documentation">
+      <created>1570189285188</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1570189285188</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
