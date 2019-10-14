@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,11 +71,11 @@
     <configuration name="publish" type="NodeJSConfigurationType" path-to-js-file="build/publish.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="build-publish" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="build" />
+        <script value="build-publish" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -116,15 +118,15 @@
       <item itemvalue="npm.test" />
       <item itemvalue="npm.publish" />
       <item itemvalue="npm.bundle" />
-      <item itemvalue="npm.build" />
+      <item itemvalue="npm.build-publish" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build-publish" />
+        <item itemvalue="npm.bundle" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.publish" />
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.bundle" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +166,9 @@
       <workItem from="1570438988244" duration="75000" />
       <workItem from="1570462866979" duration="12000" />
       <workItem from="1570808209929" duration="11000" />
-      <workItem from="1570810121638" duration="44000" />
+      <workItem from="1570810121638" duration="671000" />
+      <workItem from="1570811967088" duration="1759000" />
+      <workItem from="1571081330878" duration="319000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -355,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570428736014</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fixed disconnected callback">
+      <created>1570810185565</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1570810185565</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -390,7 +401,8 @@
     <MESSAGE value="updated hash to be different to view" />
     <MESSAGE value="publishing" />
     <MESSAGE value="documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="documentation" />
+    <MESSAGE value="fixed disconnected callback" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed disconnected callback" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
