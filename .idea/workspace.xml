@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crs-url-provider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-url-provider.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +167,9 @@
       <workItem from="1570808209929" duration="11000" />
       <workItem from="1570810121638" duration="671000" />
       <workItem from="1570811967088" duration="1759000" />
-      <workItem from="1571081330878" duration="319000" />
+      <workItem from="1571081330878" duration="335000" />
+      <workItem from="1571082056256" duration="17000" />
+      <workItem from="1571684557008" duration="935000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -366,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570810185565</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="build with title property setter">
+      <created>1571081664314</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1571081664314</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -402,7 +410,8 @@
     <MESSAGE value="publishing" />
     <MESSAGE value="documentation" />
     <MESSAGE value="fixed disconnected callback" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed disconnected callback" />
+    <MESSAGE value="build with title property setter" />
+    <option name="LAST_COMMIT_MESSAGE" value="build with title property setter" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

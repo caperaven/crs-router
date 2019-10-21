@@ -46,7 +46,6 @@ export class Router extends HTMLElement {
         return fetch(path).then(result => result.text()).then(text => this.routesDef = JSON.parse(text));
     }
 
-
     async _loadView(def) {
         if (this.viewModel != null) {
             this.viewModel.disconnectedCallback && this.viewModel.disconnectedCallback();

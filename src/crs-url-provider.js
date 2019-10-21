@@ -6,7 +6,16 @@ export class NavigationProvider {
         this._hashChangedHandler = this._hashChanged.bind(this);
         window.addEventListener("hashchange", this._hashChangedHandler, false);
 
-        this._setUrl(this._router.routesDef.default).then(() => this._router.goto(this._router.routesDef.default));
+        const hash = window.location.hash.trim();
+        if (hash == "#" || hash == "") {
+            this._setUrl(this._router.routesDef.default).then(() => this._router.goto(this._router.routesDef.default));
+        }
+        else {
+            this._hashChanged({
+                oldURL: "",
+                newURL: window.location.href
+            })
+        }
     }
 
     dispose() {
