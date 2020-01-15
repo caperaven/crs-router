@@ -13,7 +13,7 @@
     <script type="module" src="node_modules/crs-binding/crs-binding.js"></script>
 
     <script type="module">
-        import "./src/crs-router.js";
+        import "./publish/crs-router.js";
         document.querySelector("crs-router").viewCreatedCallback = (view) => {
             return crsbinding.observe(view);
         }

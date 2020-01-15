@@ -31,6 +31,12 @@
       "title": "Subroute",
       "hash": "#sub",
       "view": "subroute"
+    },
+    {
+      "title": "Details",
+      "hash": "#details",
+      "view": "details",
+      "routeParameters": ["resourceName", "resourceId"]
     }
   ]
 }

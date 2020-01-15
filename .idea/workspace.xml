@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/details/details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/details/details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/welcome/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/welcome/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crs-url-provider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-url-provider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crs-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-utils.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +32,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../pragma/pragma-views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -169,7 +176,12 @@
       <workItem from="1570811967088" duration="1759000" />
       <workItem from="1571081330878" duration="335000" />
       <workItem from="1571082056256" duration="17000" />
-      <workItem from="1571684557008" duration="935000" />
+      <workItem from="1571684557008" duration="1151000" />
+      <workItem from="1572841841604" duration="1311000" />
+      <workItem from="1573027295546" duration="56000" />
+      <workItem from="1573318838373" duration="120000" />
+      <workItem from="1574320994598" duration="31000" />
+      <workItem from="1579096912389" duration="3650000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -374,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571081664314</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="updated router not to novigate if you refresh current page">
+      <created>1571685704552</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1571685704552</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView">
@@ -411,7 +430,8 @@
     <MESSAGE value="documentation" />
     <MESSAGE value="fixed disconnected callback" />
     <MESSAGE value="build with title property setter" />
-    <option name="LAST_COMMIT_MESSAGE" value="build with title property setter" />
+    <MESSAGE value="updated router not to novigate if you refresh current page" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated router not to novigate if you refresh current page" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

@@ -1,4 +1,4 @@
-#Bare metal web router
+#CRS router
 This is a vanilla web component quickly enabling loading of views in SPA applications.
 
 ## Install
@@ -262,4 +262,45 @@ https://github.com/caperaven/crs-router-example
 
 If you have any feature requests or bug reports you are welcome to post them there.
 
+## Route parameters
+So up to this point we have been looking at features using a standard parameterised url using `?`.
+You can also use route definitions using `/`;
+
+```
+http://127.0.0.1:8000/#myView/myresource/100
+```
+
+To make this work you will need to define routeParameters in the json definition of the route.json file.
+
+```json
+{
+  "title": "Details",
+  "hash": "#details",
+  "view": "details",
+  "routeParameters": ["resourceName", "resourceId"]
+}
+```
+
+The parametersChanged function still functions as expected where you will get the following object back
+
+```json
+{
+  "resourceName": "myresource",
+  "resourceId": "100"
+}
+```
+
+if you add additional parameters in the url that is not defined in the json file it will also be added in the parameterised changed but as `parameter`;
+So if you use this url
+```
+http://127.0.0.1:8000/#myView/myresource/100/a
+```
+you will be given
+```json
+{
+  "resourceName": "myresource",
+  "resourceId": "100",
+  "parameter3": "a"
+}
+```
 

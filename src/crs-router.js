@@ -1,4 +1,4 @@
-import {getHashParameters} from "./crs-utils.js";
+import {getHashParameters, getRouteParameters} from "./crs-utils.js";
 
 export class Router extends HTMLElement {
     async connectedCallback() {
@@ -16,6 +16,11 @@ export class Router extends HTMLElement {
     }
 
     async goto(view, parameters, prop = "view") {
+        const fn = view.indexOf("/") == -1 ? getHashParameters : getRouteParameters;
+
+        if (view.indexOf("/") != -1) {
+            view = view.split("/")[0];
+        }
         const def = this.routesDef.routes.find(item => item[prop] === view);
 
         if (def == null) {
@@ -32,7 +37,7 @@ export class Router extends HTMLElement {
         if (this.viewModel != null) {
             this.viewModel["element"] = this;
 
-            this.viewModel.parameters = parameters || await getHashParameters(window.location.hash).parameters;
+            this.viewModel.parameters = parameters || await fn(window.location.hash, def).parameters;
             this.viewModel.connectedCallback && this.viewModel.connectedCallback();
 
             if (this.viewModel.parameters != null) {
