@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/details/details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/details/details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/welcome/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/welcome/welcome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crs-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-utils.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +173,9 @@
       <workItem from="1573027295546" duration="56000" />
       <workItem from="1573318838373" duration="120000" />
       <workItem from="1574320994598" duration="31000" />
-      <workItem from="1579096912389" duration="3650000" />
+      <workItem from="1579096912389" duration="3965000" />
+      <workItem from="1579102661597" duration="14000" />
+      <workItem from="1579251502461" duration="213000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -393,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571685704552</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="added additional path">
+      <created>1579102356227</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1579102356228</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView">
@@ -422,6 +423,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="initial" />
     <MESSAGE value="adding sub routes examples" />
     <MESSAGE value="added tests" />
@@ -431,7 +434,8 @@
     <MESSAGE value="fixed disconnected callback" />
     <MESSAGE value="build with title property setter" />
     <MESSAGE value="updated router not to novigate if you refresh current page" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated router not to novigate if you refresh current page" />
+    <MESSAGE value="added additional path" />
+    <option name="LAST_COMMIT_MESSAGE" value="added additional path" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

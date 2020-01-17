@@ -1,15 +1,19 @@
 {
     "name": "crs-router",
-    "version": "0.0.32",
-    "description": "",
+    "version": "0.0.34",
+    "description": "Zero dependency router web component for framework free applications",
     "main": "index.js",
     "scripts": {
         "test": "jest",
         "bundle": "rollup -c",
         "build-publish": "rollup -c & node build/publish.js"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "webcomponent",
+        "router"
+    ],
+    "author": "Johan Rabie",
+    "homepage": "https://caperaven.co.za/",
     "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.6.0",
