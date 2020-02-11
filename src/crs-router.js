@@ -54,6 +54,9 @@ export class Router extends HTMLElement {
     async _loadView(def) {
         if (this.viewModel != null) {
             this.viewModel.disconnectedCallback && this.viewModel.disconnectedCallback();
+
+            this.viewDisposedCallback && this.viewDisposedCallback(this.viewModel);
+
             this.viewModel.element = null;
             this.viewModel = null;
         }
