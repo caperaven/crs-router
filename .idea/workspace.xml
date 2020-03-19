@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/about/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/about/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/content-page1/content-page1.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/content-page1/content-page1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/details/details.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/details/details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/subroute/subroute.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/subroute/subroute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/welcome/welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/welcome/welcome.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +171,7 @@
       <workItem from="1579251502461" duration="298000" />
       <workItem from="1580467919602" duration="124000" />
       <workItem from="1581433654014" duration="448000" />
-      <workItem from="1584642862905" duration="3196000" />
+      <workItem from="1584642862905" duration="3439000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -409,7 +404,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584645344938</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="added style loading">
+      <created>1584653647622</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1584653647622</updated>
+    </task>
+    <task id="LOCAL-00035" summary="added style loading">
+      <created>1584653872316</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1584653872316</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,10 +454,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="added style loading" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1584653647018">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1584653871773">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584653647018" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584653871773" />
     <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1584653849631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
