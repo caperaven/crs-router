@@ -1,5 +1,6 @@
 export default class Welcome {
     connectedCallback() {
+        this.element.style.visibility = ""
     }
 
     disconnectedCallback() {

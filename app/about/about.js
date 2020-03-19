@@ -1,10 +1,6 @@
 export default class About {
     connectedCallback() {
-        console.log("connected")
-    }
-
-    disconnectedCallback() {
-        console.log("disconnected");
+        this.element.style.visibility = ""
     }
 
     canLeave(hash, parameters) {

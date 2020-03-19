@@ -1,5 +1,5 @@
 export default class Details {
     parametersChanged(params) {
-        console.log(params);
+        this.element.style.visibility = ""
     }
 }
