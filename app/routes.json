@@ -2,11 +2,13 @@
   "default": "welcome",
   "root": "app",
   "auto-nav": true,
+  "auto-hide": true,
   "routes": [
     {
       "title": "Welcome",
       "hash": "#wel",
       "view": "welcome",
+      "hasStyle": true,
       "parameters": {
         "id": 100
       }
@@ -14,7 +16,8 @@
     {
       "title": "About",
       "hash": "#about",
-      "view": "about"
+      "view": "about",
+      "hasStyle": true
     },
     {
       "title": "Content Page 1",

@@ -125,11 +125,13 @@ Here is a example of a routes json file
   "default": "welcome",
   "root": "app",
   "auto-nav": true,
+  "auto-hide": true,
   "routes": [
     {
       "title": "Welcome",
       "hash": "#wel",
       "view": "welcome",
+      "hasStyle": true,
       "parameters": {
         "id": 100
       }
@@ -146,6 +148,7 @@ Here is a example of a routes json file
 1. default - what is the default view to load when the router is initialized
 1. root - what is the folder path where the views in this configuration's routes can be found
 1. auto-nav - auto navigate on url change
+1. auto-hide - if you want to process the view before displaying it, set auto hide to true. this sets visibility to hidden when routes change and you must set it to visible manually. This only applies if the view is NOT html only.
 1. routes - definition of what routes are available
 
 ## Auto nav
@@ -261,6 +264,13 @@ You can find a example application on github.
 https://github.com/caperaven/crs-router-example
 
 If you have any feature requests or bug reports you are welcome to post them there.
+
+## Styles
+If you have a style for the view you can set the `hasStyle` property on the route to true.  
+This will look for a style sheet at "/styles/views/[viewname].css".  
+For example, a view of "details" should have a style at "/styles/views/details.css".
+This css is loaded and added to the HTML before it is loaded.
+This allows you to have granular control over styles while preventing any style popping that may happen during style loading delays. 
 
 ## Route parameters
 So up to this point we have been looking at features using a standard parameterised url using `?`.
