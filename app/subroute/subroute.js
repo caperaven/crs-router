@@ -5,7 +5,6 @@ export default class SubRoute {
         this.navHandler = this.nav.bind(this);
         this.select.addEventListener("change", this.navHandler);
         this.router = this.element.querySelector("crs-router");
-        this.element.style.visibility = ""
     }
 
     disconnectedCallback() {
@@ -16,5 +15,9 @@ export default class SubRoute {
 
     nav(event) {
         this.router.goto(event.target.value);
+    }
+
+    showScreen() {
+        this.element.style.visibility = ""
     }
 }

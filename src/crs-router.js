@@ -61,8 +61,8 @@ export class Router extends HTMLElement {
 
             this.viewDisposedCallback && this.viewDisposedCallback(this.viewModel);
 
-            this.viewModel.element = null;
-            this.viewModel = null;
+            delete this.viewModel.element;
+            delete this.viewModel;
         }
 
         const root = this.routesDef.root || "app";
@@ -77,19 +77,20 @@ export class Router extends HTMLElement {
             promises.push(fetch(`/styles/views/${def.view}.css`).then(result => result.text()).then(text => style = `<style>${text}</style>`));
         }
 
-        Promise.all(promises).then(() => {
+        await Promise.all(promises).then(async () => {
             this.innerHTML = `${style}\n${html}`;
-        });
 
-        if (def["html-only"] != true) {
-            const module = await import(`/${root}/${def.view}/${def.view}.js`);
-            const instance = new module.default();
-            this.viewModel = this.viewCreatedCallback != null ? this.viewCreatedCallback(instance) : instance;
-            this.viewModel.title = def.title;
-        }
-        else {
-            this.style.visibility = "";
-        }
+            if (def["html-only"] != true) {
+                const module = await import(`/${root}/${def.view}/${def.view}.js`);
+                const instance = new module.default();
+                this.viewModel = this.viewCreatedCallback != null ? this.viewCreatedCallback(instance) : instance;
+                this.viewModel.element = this;
+                this.viewModel.title = def.title;
+            }
+            else {
+                this.style.visibility = "";
+            }
+        });
     }
 }
 

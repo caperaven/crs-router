@@ -1,6 +1,6 @@
 {
     "name": "crs-router",
-    "version": "0.0.36",
+    "version": "0.0.40",
     "description": "Zero dependency router web component for framework free applications",
     "main": "index.js",
     "scripts": {

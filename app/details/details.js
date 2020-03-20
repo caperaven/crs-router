@@ -1,5 +1,5 @@
 export default class Details {
-    parametersChanged(params) {
+    showScreen() {
         this.element.style.visibility = ""
     }
 }
