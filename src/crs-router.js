@@ -7,6 +7,8 @@ export class Router extends HTMLElement {
         const providerModule = this.routesDef["auto-nav"] == true ? "./crs-url-provider.js" : "./crs-static-provider.js";
         const module = await import(providerModule);
         this._provider = new module.NavigationProvider(this);
+
+        this.dispatchEvent(new CustomEvent("ready"));
     }
 
     disconnectedCallback() {
