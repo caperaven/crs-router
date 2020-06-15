@@ -336,4 +336,13 @@ The properties of the definition are:
 
 1. name - name of the property on the resource object
 1. path - relative to the view folder what file should be loaded. Note that this is only forwards so the "./../" syntax will not work.
-1. type - this is the fetch api function that is used during the loading process. `text()`, `blob()` ... see fetch api for details
+1. type - this is the fetch api function that is used during the loading process. `text()`, `blob()` ... see fetch api for details.
+
+The loading process waits for all the resources to be done before it will uses the connectedCallback.
+This means that you can access the resources object of the view model at connectedCallback.
+
+```js
+connectedCallback() {
+    console.log(this.resources);
+}
+```
