@@ -73,6 +73,15 @@ export class Router extends HTMLElement {
         let style = "";
 
         const promises = [];
+
+        let resObj = null;
+        if (def.resources != null) {
+            resObj = {};
+            for (let resource of def.resources) {
+                promises.push(fetch(`/${root}/${def.view}/${resource.path}`).then(result => result[resource.type || "text"]()).then(bytes => resObj[resource.name] = bytes));
+            }
+        }
+
         promises.push(fetch(`/${root}/${def.view}/${def.view}.html`).then(result => result.text()).then(text => html = text));
 
         if (def.hasStyle === true) {
@@ -91,6 +100,10 @@ export class Router extends HTMLElement {
             }
             else {
                 this.style.visibility = "";
+            }
+
+            if (resObj != null) {
+                this.viewModel.resources = resObj;
             }
         });
     }

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/welcome/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/welcome/welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/welcome/welcome.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +183,8 @@
       <workItem from="1585237327367" duration="657000" />
       <workItem from="1585290063235" duration="240000" />
       <workItem from="1589177588134" duration="1071000" />
-      <workItem from="1591969412152" duration="490000" />
+      <workItem from="1591969412152" duration="547000" />
+      <workItem from="1592235549664" duration="3057000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -444,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584695225963</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="add ready event when it has loaded">
+      <created>1591969913235</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1591969913235</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,29 +485,30 @@
     <MESSAGE value="updated router not to novigate if you refresh current page" />
     <MESSAGE value="added additional path" />
     <MESSAGE value="added style loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="added style loading" />
+    <MESSAGE value="add ready event when it has loaded" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ready event when it has loaded" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1584695224656">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1591969912650">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584695224656" />
-    <state width="1899" height="135" key="GridCell.Tab.0.bottom" timestamp="1591969611302">
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591969912650" />
+    <state width="1899" height="135" key="GridCell.Tab.0.bottom" timestamp="1591969958696">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="135" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591969611302" />
-    <state width="1899" height="135" key="GridCell.Tab.0.center" timestamp="1591969611302">
+    <state width="1899" height="135" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591969958696" />
+    <state width="1899" height="135" key="GridCell.Tab.0.center" timestamp="1591969958696">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="135" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591969611302" />
-    <state width="1899" height="135" key="GridCell.Tab.0.left" timestamp="1591969611302">
+    <state width="1899" height="135" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591969958696" />
+    <state width="1899" height="135" key="GridCell.Tab.0.left" timestamp="1591969958695">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="135" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591969611302" />
-    <state width="1899" height="135" key="GridCell.Tab.0.right" timestamp="1591969611302">
+    <state width="1899" height="135" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591969958695" />
+    <state width="1899" height="135" key="GridCell.Tab.0.right" timestamp="1591969958696">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="135" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591969611302" />
+    <state width="1899" height="135" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591969958696" />
     <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1589177745001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

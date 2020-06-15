@@ -11,7 +11,14 @@
       "hasStyle": true,
       "parameters": {
         "id": 100
-      }
+      },
+      "resources": [
+        {
+          "name": "menu",
+          "path": "menu.html",
+          "type": "text"
+        }
+      ]
     },
     {
       "title": "About",
