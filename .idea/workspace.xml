@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/welcome/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/welcome/welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/welcome/welcome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +181,7 @@
       <workItem from="1585290063235" duration="240000" />
       <workItem from="1589177588134" duration="1071000" />
       <workItem from="1591969412152" duration="547000" />
-      <workItem from="1592235549664" duration="3057000" />
+      <workItem from="1592235549664" duration="3844000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -452,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591969913235</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="added resource loading">
+      <created>1592238890145</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1592238890145</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,13 +490,14 @@
     <MESSAGE value="added additional path" />
     <MESSAGE value="added style loading" />
     <MESSAGE value="add ready event when it has loaded" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ready event when it has loaded" />
+    <MESSAGE value="added resource loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="added resource loading" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1591969912650">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1592238889478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591969912650" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592238889478" />
     <state width="1899" height="135" key="GridCell.Tab.0.bottom" timestamp="1591969958696">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

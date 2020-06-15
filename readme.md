@@ -314,3 +314,26 @@ you will be given
 }
 ```
 
+## Loading resources
+
+You can load additional resources during the view load process.
+This can be anything and is often used for resources required for the view to properly operate.  
+Such an example is contextual menu's that you want to display on a global toolbar apart from the main view.  
+
+To load these additional resources, add a resource object to the route definition, same as you would do with the parameters.
+
+```js
+"resources": [
+    {
+      "name": "menu",
+      "path": "menu.html",
+      "type": "text"
+    }
+]
+```
+
+The properties of the definition are:
+
+1. name - name of the property on the resource object
+1. path - relative to the view folder what file should be loaded. Note that this is only forwards so the "./../" syntax will not work.
+1. type - this is the fetch api function that is used during the loading process. `text()`, `blob()` ... see fetch api for details
