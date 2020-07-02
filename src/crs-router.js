@@ -40,7 +40,7 @@ export class Router extends HTMLElement {
             this.viewModel["element"] = this;
 
             this.viewModel.parameters = parameters || await fn(window.location.hash, def).parameters;
-            this.viewModel.connectedCallback && this.viewModel.connectedCallback();
+            this.viewModel.connectedCallback && await this.viewModel.connectedCallback();
 
             if (this.viewModel.parameters != null) {
                 this.viewModel.parametersChanged && this.viewModel.parametersChanged(this.viewModel.parameters);
