@@ -1,4 +1,4 @@
-#CRS router
+# CRS router
 This is a vanilla web component quickly enabling loading of views in SPA applications.
 
 ## Install
