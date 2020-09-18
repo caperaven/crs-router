@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/crs-loader.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crs-loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/welcome/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/welcome/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/publish.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/publish.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +30,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
@@ -123,6 +128,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -185,6 +191,11 @@
       <workItem from="1592235549664" duration="5599000" />
       <workItem from="1592295723413" duration="584000" />
       <workItem from="1593698876232" duration="168000" />
+      <workItem from="1595421452616" duration="1793000" />
+      <workItem from="1599048462075" duration="43000" />
+      <workItem from="1599211340351" duration="29000" />
+      <workItem from="1600434528978" duration="796000" />
+      <workItem from="1600457420129" duration="6696000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -484,20 +495,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -518,30 +528,43 @@
     <option name="LAST_COMMIT_MESSAGE" value="added resource loading" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599211356563">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1599211356563" />
     <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1592240164282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592240164282" />
-    <state width="1899" height="292" key="GridCell.Tab.0.bottom" timestamp="1593699050921">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1256" height="413" key="GridCell.Tab.0.bottom" timestamp="1600463693484">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1899" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593699050921" />
-    <state width="1899" height="292" key="GridCell.Tab.0.center" timestamp="1593699050921">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593702270115" />
+    <state width="1256" height="413" key="GridCell.Tab.0.bottom/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600463693484" />
+    <state width="1256" height="413" key="GridCell.Tab.0.center" timestamp="1600463693484">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1899" height="292" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593699050921" />
-    <state width="1899" height="292" key="GridCell.Tab.0.left" timestamp="1593699050921">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="292" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593702270115" />
+    <state width="1256" height="413" key="GridCell.Tab.0.center/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600463693484" />
+    <state width="1256" height="413" key="GridCell.Tab.0.left" timestamp="1600463693484">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1899" height="292" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593699050921" />
-    <state width="1899" height="292" key="GridCell.Tab.0.right" timestamp="1593699050921">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="292" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593702270115" />
+    <state width="1256" height="413" key="GridCell.Tab.0.left/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600463693484" />
+    <state width="1256" height="413" key="GridCell.Tab.0.right" timestamp="1600463693484">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1899" height="292" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593699050921" />
-    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1592296101514">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="292" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593702270115" />
+    <state width="1256" height="413" key="GridCell.Tab.0.right/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600463693484" />
+    <state x="875" y="339" width="810" height="801" key="find.popup" timestamp="1599048480496">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592296101514" />
+    <state x="875" y="339" width="810" height="801" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1599048480496" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1599211366438">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1599211366438" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

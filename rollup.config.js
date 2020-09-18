@@ -28,5 +28,14 @@ export default [
         plugins: [
             terser()
         ]
+    },
+    {
+        input: "src/crs-loader.js",
+        output: [
+            {file: 'dist/crs-loader.js', format: 'es'}
+        ],
+        plugins: [
+            terser()
+        ]
     }
 ];

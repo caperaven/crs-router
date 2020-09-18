@@ -8,6 +8,7 @@ class Publish {
         const instance = new Publish();
         instance.copyFiles("./dist/*.*");
         instance.copyFiles("./readme.md");
+        instance.copyFiles("./src/crs-loader.html");
         instance.bumpVersion();
     }
     

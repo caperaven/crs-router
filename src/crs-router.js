@@ -1,12 +1,23 @@
 import {getHashParameters, getRouteParameters} from "./crs-utils.js";
+import "./crs-loader.js";
 
 export class Router extends HTMLElement {
     async connectedCallback() {
+        this._loader = document.createElement("crs-loader");
+        this.showLoader(false);
+        document.documentElement.appendChild(this._loader);
+
         await this._loadRoutes();
 
         const providerModule = this.routesDef["auto-nav"] == true ? "./crs-url-provider.js" : "./crs-static-provider.js";
         const module = await import(providerModule);
         this._provider = new module.NavigationProvider(this);
+
+        requestAnimationFrame(() => {
+            this._rect = this.getBoundingClientRect();
+            this._loader.style.left = `${(this._rect.width / 2) - 30}px`;
+            this._loader.style.top = `${this._rect.top + 100}px`;
+        })
 
         this.dispatchEvent(new CustomEvent("ready"));
     }
@@ -15,9 +26,16 @@ export class Router extends HTMLElement {
         this.routesDef = null;
         this._provider.dispose();
         this._provider = null;
+        this._loader = null;
+        this._rect = null;
+    }
+
+    showLoader(visible) {
+        this._loader.style.display = visible == true ? "" : "none";
     }
 
     async goto(view, parameters, prop = "view") {
+        this.showLoader(true);
         const fn = view.indexOf("/") == -1 ? getHashParameters : getRouteParameters;
 
         if (view.indexOf("/") != -1) {
@@ -45,7 +63,14 @@ export class Router extends HTMLElement {
             if (this.viewModel.parameters != null) {
                 this.viewModel.parametersChanged && this.viewModel.parametersChanged(this.viewModel.parameters);
             }
+
+            this.viewModel.showScreen && this.viewModel.showScreen();
         }
+
+        const timeout = setTimeout(() => {
+            clearTimeout(timeout);
+            this.showLoader(false);
+        }, 500);
     }
 
     async _loadRoutes() {
