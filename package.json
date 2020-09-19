@@ -1,6 +1,6 @@
 {
     "name": "crs-router",
-    "version": "0.0.52",
+    "version": "0.0.54",
     "description": "Zero dependency router web component for framework free applications",
     "main": "index.js",
     "scripts": {
@@ -24,6 +24,7 @@
         "babel-jest": "^24.9.0",
         "crs-binding": "0.0.189",
         "glob": "^7.1.4",
+        "html-minifier": "^4.0.0",
         "jest": "^24.9.0",
         "mkdirp": "^0.5.1",
         "rollup": "^1.23.0",

@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/crs-loader.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/crs-loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/welcome/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/welcome/welcome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/publish.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/publish.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +190,8 @@
       <workItem from="1599048462075" duration="43000" />
       <workItem from="1599211340351" duration="29000" />
       <workItem from="1600434528978" duration="796000" />
-      <workItem from="1600457420129" duration="6696000" />
+      <workItem from="1600457420129" duration="6888000" />
+      <workItem from="1600494802045" duration="1857000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -491,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592240164798</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="added resource loading">
+      <created>1600464288872</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1600464288872</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,30 +535,31 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1599211356563" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1592240164282">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="780" y="153" key="CommitChangelistDialog2" timestamp="1600464288204">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592240164282" />
-    <state width="1256" height="413" key="GridCell.Tab.0.bottom" timestamp="1600463693484">
+    <state x="780" y="153" key="CommitChangelistDialog2/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600464288204" />
+    <state width="1256" height="413" key="GridCell.Tab.0.bottom" timestamp="1600464312586">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1899" height="292" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593702270115" />
-    <state width="1256" height="413" key="GridCell.Tab.0.bottom/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600463693484" />
-    <state width="1256" height="413" key="GridCell.Tab.0.center" timestamp="1600463693484">
+    <state width="1256" height="413" key="GridCell.Tab.0.bottom/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600464312586" />
+    <state width="1256" height="413" key="GridCell.Tab.0.center" timestamp="1600464312586">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1899" height="292" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593702270115" />
-    <state width="1256" height="413" key="GridCell.Tab.0.center/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600463693484" />
-    <state width="1256" height="413" key="GridCell.Tab.0.left" timestamp="1600463693484">
+    <state width="1256" height="413" key="GridCell.Tab.0.center/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600464312586" />
+    <state width="1256" height="413" key="GridCell.Tab.0.left" timestamp="1600464312586">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1899" height="292" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593702270115" />
-    <state width="1256" height="413" key="GridCell.Tab.0.left/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600463693484" />
-    <state width="1256" height="413" key="GridCell.Tab.0.right" timestamp="1600463693484">
+    <state width="1256" height="413" key="GridCell.Tab.0.left/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600464312586" />
+    <state width="1256" height="413" key="GridCell.Tab.0.right" timestamp="1600464312586">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1899" height="292" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593702270115" />
-    <state width="1256" height="413" key="GridCell.Tab.0.right/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600463693484" />
+    <state width="1256" height="413" key="GridCell.Tab.0.right/0.0.2560.1400/877.-1080.1920.1040@0.0.2560.1400" timestamp="1600464312586" />
     <state x="875" y="339" width="810" height="801" key="find.popup" timestamp="1599048480496">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

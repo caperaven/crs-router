@@ -35,7 +35,16 @@ export class Router extends HTMLElement {
     }
 
     async goto(view, parameters, prop = "view") {
-        this.showLoader(true);
+        let loading = true;
+
+        const timeout = setTimeout(() => {
+            clearTimeout(timeout);
+            if (loading == true) {
+                this.showLoader(true);
+            }
+        }, 200)
+
+
         const fn = view.indexOf("/") == -1 ? getHashParameters : getRouteParameters;
 
         if (view.indexOf("/") != -1) {
@@ -67,10 +76,8 @@ export class Router extends HTMLElement {
             this.viewModel.showScreen && this.viewModel.showScreen();
         }
 
-        const timeout = setTimeout(() => {
-            clearTimeout(timeout);
-            this.showLoader(false);
-        }, 500);
+        loading = false;
+        this.showLoader(false);
     }
 
     async _loadRoutes() {

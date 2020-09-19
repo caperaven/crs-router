@@ -2,18 +2,28 @@ const fs = require("fs");
 const mkdirp = require("mkdirp");
 const glob = require("glob");
 const path = require("path");
+const htmlMinifi = require("html-minifier").minify;
 
 class Publish {
     static async distribute() {
         const instance = new Publish();
         instance.copyFiles("./dist/*.*");
         instance.copyFiles("./readme.md");
-        instance.copyFiles("./src/crs-loader.html");
         instance.bumpVersion();
+        await instance.copyHtml();
     }
     
     constructor() {
         mkdirp.sync(path.resolve("./publish"));
+    }
+
+    async copyHtml() {
+        let html = fs.readFileSync("./src/crs-loader.html", "utf8");
+        html = htmlMinifi(html, {
+            minifyCSS: true,
+            collapseWhitespace: true
+        });
+        fs.writeFileSync("./publish/crs-loader.html", html, "utf8");
     }
 
     async copyFiles(query) {
