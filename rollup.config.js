@@ -3,7 +3,7 @@ import { terser } from "rollup-plugin-terser";
 
 export default [
     {
-        input: "src/index.js",
+        input: "src/crs-router.js",
         output: [
             {file: 'dist/crs-router.js', format: 'es'}
         ],

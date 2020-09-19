@@ -4,6 +4,7 @@ import "./crs-loader.js";
 export class Router extends HTMLElement {
     async connectedCallback() {
         this._loader = document.createElement("crs-loader");
+
         this.showLoader(false);
         document.documentElement.appendChild(this._loader);
 

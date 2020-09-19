@@ -7,23 +7,15 @@ const htmlMinifi = require("html-minifier").minify;
 class Publish {
     static async distribute() {
         const instance = new Publish();
-        instance.copyFiles("./dist/*.*");
+        await instance.copySource("src");
         instance.copyFiles("./readme.md");
         instance.bumpVersion();
-        await instance.copyHtml();
+        await instance.saveCommands();
     }
     
     constructor() {
         mkdirp.sync(path.resolve("./publish"));
-    }
-
-    async copyHtml() {
-        let html = fs.readFileSync("./src/crs-loader.html", "utf8");
-        html = htmlMinifi(html, {
-            minifyCSS: true,
-            collapseWhitespace: true
-        });
-        fs.writeFileSync("./publish/crs-loader.html", html, "utf8");
+        this.commands = [];
     }
 
     async copyFiles(query) {
@@ -72,6 +64,43 @@ class Publish {
 
         fs.writeFileSync(sourcePackage, JSON.stringify(pkg, null, 4), "utf8");
         fs.copyFileSync(sourcePackage, targetPackage);
+    }
+
+    async copySource(sourceFolder) {
+        const files = await this.getFiles(`./${sourceFolder}/**/*.*`);
+        for (let file of files) {
+            console.log(file);
+
+            const target = `./publish/`;
+            const fileName = path.basename(file);
+            const ext = path.extname(file);
+            this.initFolder(target);
+
+            const toFile = `${target}${fileName}`.replace("publish/", "");
+
+            if (ext == ".js") {
+                this.commands.push(`terser ${toFile} -c -m -o ${toFile}`);
+            }
+
+            if (ext == ".html") {
+                let html = fs.readFileSync(file, "utf8");
+                html = htmlMinifi(html, {
+                    minifyCSS: true,
+                    collapseWhitespace: true
+                });
+                fs.writeFileSync(`${target}${fileName}`, html, "utf8");
+            }
+            else {
+                fs.copyFileSync(file, `${target}${fileName}`);
+            }
+
+        }
+    }
+
+    async saveCommands() {
+        const string = this.commands.join("\n");
+        const target = `./publish/minify.sh`;
+        fs.writeFileSync(target, string, "utf8");
     }
 }
 

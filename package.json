@@ -1,12 +1,12 @@
 {
     "name": "crs-router",
-    "version": "0.0.54",
+    "version": "0.0.69",
     "description": "Zero dependency router web component for framework free applications",
     "main": "index.js",
     "scripts": {
         "test": "jest",
         "bundle": "rollup -c",
-        "build-publish": "rollup -c & node build/publish.js"
+        "build-publish": "node build/publish.js"
     },
     "keywords": [
         "webcomponent",
