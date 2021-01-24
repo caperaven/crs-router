@@ -154,6 +154,7 @@ export class Router extends HTMLElement {
             const script = document.createElement('script');
             script.type = 'text/javascript';
             script.src = url;
+            script.type = "module";
             script.setAttribute("temp", "true");
             document.head.appendChild(script);
         }
