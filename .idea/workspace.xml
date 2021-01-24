@@ -195,7 +195,7 @@
       <workItem from="1601448330228" duration="104000" />
       <workItem from="1602588688710" duration="642000" />
       <workItem from="1611517813816" duration="4502000" />
-      <workItem from="1611523040441" duration="18000" />
+      <workItem from="1611523040441" duration="161000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1567763907755</created>
@@ -526,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611522882922</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="load components with static files">
+      <created>1611523132750</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1611523132750</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,26 +572,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="load components with static files" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="767" y="183" key="CommitChangelistDialog2" timestamp="1611522882311">
+    <state x="767" y="183" key="CommitChangelistDialog2" timestamp="1611523132238">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="767" y="183" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611522882311" />
-    <state width="2533" height="418" key="GridCell.Tab.0.bottom" timestamp="1611522942175">
+    <state x="767" y="183" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611523132238" />
+    <state width="2533" height="418" key="GridCell.Tab.0.bottom" timestamp="1611523064938">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2533" height="418" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611522942175" />
-    <state width="2533" height="418" key="GridCell.Tab.0.center" timestamp="1611522942175">
+    <state width="2533" height="418" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611523064938" />
+    <state width="2533" height="418" key="GridCell.Tab.0.center" timestamp="1611523064938">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2533" height="418" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611522942175" />
-    <state width="2533" height="418" key="GridCell.Tab.0.left" timestamp="1611522942174">
+    <state width="2533" height="418" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611523064938" />
+    <state width="2533" height="418" key="GridCell.Tab.0.left" timestamp="1611523064938">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2533" height="418" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611522942174" />
-    <state width="2533" height="418" key="GridCell.Tab.0.right" timestamp="1611522942175">
+    <state width="2533" height="418" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611523064938" />
+    <state width="2533" height="418" key="GridCell.Tab.0.right" timestamp="1611523064938">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2533" height="418" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611522942175" />
+    <state width="2533" height="418" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611523064938" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
