@@ -35,7 +35,10 @@
       "title": "Static",
       "hash": "#static",
       "view": "static",
-      "html-only": true
+      "html-only": true,
+      "js": [
+        "/components/test-component.js"
+      ]
     },
     {
       "title": "Subroute",

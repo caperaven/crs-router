@@ -115,6 +115,10 @@ export class Router extends HTMLElement {
             }
         }
 
+        if (def.js != null) {
+            promises.push(this._loadTempJS(def.js));
+        }
+
         promises.push(fetch(`/${root}/${def.view}/${def.view}.html`).then(result => result.text()).then(text => html = text));
 
         if (def.hasStyle === true) {
@@ -139,6 +143,20 @@ export class Router extends HTMLElement {
                 this.viewModel.resources = resObj;
             }
         });
+    }
+
+    async _loadTempJS(urlCollection) {
+        for (let url of urlCollection) {
+            if (document.head.querySelector(`script[src="${url}"]`)) {
+                continue;
+            }
+
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            script.setAttribute("temp", "true");
+            document.head.appendChild(script);
+        }
     }
 }
 

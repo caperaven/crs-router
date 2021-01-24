@@ -336,7 +336,7 @@ The properties of the definition are:
 
 1. name - name of the property on the resource object
 1. path - relative to the view folder what file should be loaded. Note that this is only forwards so the "./../" syntax will not work.
-1. type - this is the fetch api function that is used during the loading process. `text()`, `blob()` ... see fetch api for details.
+1. type - this is the "fetch" api function that is used during the loading process. `text()`, `blob()` ... see fetch api for details.
 
 The loading process waits for all the resources to be done before it will uses the connectedCallback.
 This means that you can access the resources object of the view model at connectedCallback.
@@ -346,3 +346,22 @@ connectedCallback() {
     console.log(this.resources);
 }
 ```
+
+## Loading js files
+
+If you have a static html only page and it contains web components you can either load them at startup or define them in the route def.  
+Adding it to the route def loads it only when you move that that route.  
+
+Add the following to the root def.
+```js
+"js": [
+    "/components/test-component.js"
+]
+```
+
+If this has been loaded before it will not be loaded again.  
+The browser retains the definition in memory anyway, so we keep the script reference in the header as removing it will not help much.
+Once the page is refreshed using the browser's refresh button the context will be removed.  
+In that case when you navigate back to the page that requires the component, it will be loaded again.
+
+It does not have to be a component, it can also be a library file you require.
