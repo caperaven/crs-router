@@ -87,6 +87,8 @@ export class Router extends HTMLElement {
     }
 
     async _loadView(def) {
+        const prefix = document.body.dataset.appPath || "";
+
         if (this.routesDef["auto-hide"] == true) {
             this.style.visibility = "hidden";
         }
@@ -111,7 +113,7 @@ export class Router extends HTMLElement {
         if (def.resources != null) {
             resObj = {};
             for (let resource of def.resources) {
-                promises.push(fetch(`/${root}/${def.view}/${resource.path}`).then(result => result[resource.type || "text"]()).then(bytes => resObj[resource.name] = bytes));
+                promises.push(fetch(`${prefix}/${root}/${def.view}/${resource.path}`).then(result => result[resource.type || "text"]()).then(bytes => resObj[resource.name] = bytes));
             }
         }
 
@@ -119,10 +121,10 @@ export class Router extends HTMLElement {
             promises.push(this._loadTempJS(def.js));
         }
 
-        promises.push(fetch(`/${root}/${def.view}/${def.view}.html`).then(result => result.text()).then(text => html = text));
+        promises.push(fetch(`${prefix}/${root}/${def.view}/${def.view}.html`).then(result => result.text()).then(text => html = text));
 
         if (def.hasStyle === true) {
-            promises.push(fetch(`/styles/views/${def.view}.css`).then(result => result.text()).then(text => style = `<style>${text}</style>`));
+            promises.push(fetch(`${prefix}/styles/views/${def.view}.css`).then(result => result.text()).then(text => style = `<style>${text}</style>`));
         }
 
         await Promise.all(promises).then(async () => {
