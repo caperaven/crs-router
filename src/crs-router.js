@@ -131,7 +131,7 @@ export class Router extends HTMLElement {
             this.innerHTML = `${style}\n${html}`;
 
             if (def["html-only"] != true) {
-                const module = await import(`/${root}/${def.view}/${def.view}.js`);
+                const module = await import(`${prefix}/${root}/${def.view}/${def.view}.js`);
                 const instance = new module.default();
                 this.viewModel = this.viewCreatedCallback != null ? this.viewCreatedCallback(instance) : instance;
                 this.viewModel.element = this;
