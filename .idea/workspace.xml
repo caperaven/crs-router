@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deno.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/package.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,9 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="exjwrxu0" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1Qe0ln13WJrIPnP60l1IhJ03g87" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -29,25 +35,29 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
-    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "F:/caperaven projects/crs-router/build/package.js",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\caperaven projects\crs-router\build" />
       <recent name="D:\projects\caperaven-projects\crs-router" />
       <recent name="D:\projects\caperaven-projects\crs-router\build" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.publish">
+  <component name="RunManager" selected="Deno.Deno: package.js">
+    <configuration name="Deno: package.js" type="DenoConfigurationType" nameIsGenerated="true" inputPath="$PROJECT_DIR$/build/package.js" programParameters="run --allow-read --allow-write --allow-env --allow-run">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="bmw-url-provider _hashChanged same url" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -108,6 +118,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Deno.Deno: package.js" />
       <item itemvalue="JavaScript Debug.index.html (1)" />
       <item itemvalue="Jest.bmw-url-provider _hashChanged same url" />
       <item itemvalue="Node.js.publish" />
@@ -118,10 +129,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build-publish" />
         <item itemvalue="npm.bundle" />
-        <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="npm.build-publish" />
         <item itemvalue="npm.test" />
+        <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="npm.publish" />
       </list>
     </recent_temporary>
@@ -204,6 +215,7 @@
       <workItem from="1620282471769" duration="12000" />
       <workItem from="1620321539214" duration="1625000" />
       <workItem from="1623957460039" duration="412000" />
+      <workItem from="1658908267215" duration="4003000" />
     </task>
     <task id="LOCAL-00002" summary="initial">
       <created>1567772659977</created>
@@ -564,7 +576,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />

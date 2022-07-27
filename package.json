@@ -1,11 +1,11 @@
 {
     "name": "crs-router",
-    "version": "0.0.78",
+    "version": "0.0.82",
     "description": "Zero dependency router web component for framework free applications",
     "main": "index.js",
     "scripts": {
         "test": "jest",
-        "bundle": "rollup -c",
+        "bundle": "deno run --allow-read --allow-write --allow-env --allow-run ./build/package.js",
         "build-publish": "node build/publish.js"
     },
     "keywords": [
