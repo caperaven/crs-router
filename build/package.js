@@ -1,5 +1,15 @@
-import { emptyDir, ensureDir } from "https://deno.land/std@0.149.0/fs/mod.ts";
+/**
+ * Build script using deno
+ * https://droces.github.io/Deno-Cheat-Sheet/
+ */
+
+import { copy, emptyDir, ensureDir } from "https://deno.land/std@0.149.0/fs/mod.ts";
 import * as esbuild from 'https://deno.land/x/esbuild@v0.14.50/mod.js'
+import init, {minify} from "https://wilsonl.in/minify-html/deno/0.9.2/index.js";
+
+const encoder = new TextEncoder();
+const decoder = new TextDecoder();
+await init();
 
 async function createFolderStructure() {
     await ensureDir("./dist");
@@ -39,43 +49,56 @@ async function packageFile(sourceFile, targetFile, loader, format, minified) {
     await Deno.writeTextFile(targetFile, result.code);
 }
 
-/**
- * Save the html/css/json file to the target and minify it if required
- * @param sourceFile
- * @param targetFile
- * @param minified
- * @returns {Promise<void>}
- */
 async function packageMarkup(sourceFile, targetFile, minified) {
     let src = await Deno.readTextFile(sourceFile);
 
     if (minified == true) {
         src = src
-            .split(" ").join("")
             .split("\t").join("")
             .split("\r").join("")
-            .split("\n").join("");
+            .split("\n").join("")
+            .split(" ").join("");
     }
 
     await Deno.writeTextFile(targetFile, src);
 }
 
-async function bundle(file, output) {
+async function packageHTML(sourceFile, targetFile, minified) {
+    let src = await Deno.readTextFile(sourceFile);
+
+    if (minified == true) {
+        src = decoder.decode(minify(encoder.encode(src), { minify_css: true, minify_js: true, do_not_minify_doctype: true, keep_closing_tags: true }));
+    }
+
+    await Deno.writeTextFile(targetFile, src);
+}
+
+async function bundleJs(file, output, minified) {
     const result = await esbuild.build({
         entryPoints: [file],
         bundle: true,
         outfile: output,
         format: "esm",
-        minify: true
+        minify: minified
     })
 
     console.log(result);
 }
 
+async function bundleCss(file, output, minified) {
+    const result = await esbuild.build({
+        entryPoints: [file],
+        bundle: true,
+        loader: {".css": "css"},
+        outfile: output,
+        minify: minified
+    })
 
+    console.log(result);
+}
 await createFolderStructure();
 
-await packageMarkup("./src/crs-loader.html", "./dist/crs-loader.html", true);
+await packageHTML("./src/crs-loader.html", "./dist/crs-loader.html", true);
 await packageFile("./src/crs-loader.js", "./dist/crs-loader.js", "js", "esm", true);
 await packageFile("./src/crs-router.js", "./dist/crs-router.js", "js", "esm", true);
 await packageFile("./src/crs-static-provider.js", "./dist/crs-static-provider.js", "js", "esm", true);
