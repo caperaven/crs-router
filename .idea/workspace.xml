@@ -8,6 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/package.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/package.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/crs-loader.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-loader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/crs-loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/crs-static-provider.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-static-provider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/crs-url-provider.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-url-provider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/crs-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,14 +224,11 @@
       <workItem from="1623957460039" duration="412000" />
       <workItem from="1658908267215" duration="5029000" />
       <workItem from="1660304448203" duration="189000" />
-      <workItem from="1660305008808" duration="385000" />
-    </task>
-    <task id="LOCAL-00003" summary="initial">
-      <created>1567776028853</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1567776028853</updated>
+      <workItem from="1660305008808" duration="554000" />
+      <workItem from="1664789175207" duration="368000" />
+      <workItem from="1666953558676" duration="650000" />
+      <workItem from="1670172593706" duration="285000" />
+      <workItem from="1670172981673" duration="19000" />
     </task>
     <task id="LOCAL-00004" summary="initial">
       <created>1567777605433</created>
@@ -563,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658916526407</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="add dist build script">
+      <created>1660305494203</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1660305494204</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

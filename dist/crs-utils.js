@@ -1,1 +1,36 @@
-async function l(s){const e=s.split("?"),r={url:s,hash:e[0]};if(e.length==1)return r;const a={},n=e[1].split("&");for(let t of n){const o=t.split("=");a[o[0]]=o[1]}return r.parameters=a,r}function c(s,e){const r=s.split("/"),a={url:s,hash:r[0]},n={};for(let t=1;t<r.length;t++){const o=t<=e.routeParameters.length?e.routeParameters[t-1]:`param${t}`,p=r[t];n[o]=p}return a.parameters=n,a}export{l as getHashParameters,c as getRouteParameters};
+async function getHashParameters(hash) {
+  const parts = hash.split("?");
+  const result = {
+    url: hash,
+    hash: parts[0]
+  };
+  if (parts.length == 1)
+    return result;
+  const parameters = {};
+  const props = parts[1].split("&");
+  for (let prop of props) {
+    const p = prop.split("=");
+    parameters[p[0]] = p[1];
+  }
+  result.parameters = parameters;
+  return result;
+}
+function getRouteParameters(hash, def) {
+  const parts = hash.split("/");
+  const result = {
+    url: hash,
+    hash: parts[0]
+  };
+  const parameters = {};
+  for (let i = 1; i < parts.length; i++) {
+    const name = i <= def.routeParameters.length ? def.routeParameters[i - 1] : `param${i}`;
+    const value = parts[i];
+    parameters[name] = value;
+  }
+  result.parameters = parameters;
+  return result;
+}
+export {
+  getHashParameters,
+  getRouteParameters
+};

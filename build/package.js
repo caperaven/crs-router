@@ -98,11 +98,13 @@ async function bundleCss(file, output, minified) {
 }
 await createFolderStructure();
 
-await packageHTML("./src/crs-loader.html", "./dist/crs-loader.html", true);
-await packageFile("./src/crs-loader.js", "./dist/crs-loader.js", "js", "esm", true);
-await packageFile("./src/crs-router.js", "./dist/crs-router.js", "js", "esm", true);
-await packageFile("./src/crs-static-provider.js", "./dist/crs-static-provider.js", "js", "esm", true);
-await packageFile("./src/crs-url-provider.js", "./dist/crs-url-provider.js", "js", "esm", true);
-await packageFile("./src/crs-utils.js", "./dist/crs-utils.js", "js", "esm", true);
+const minimize = false;
+
+await packageHTML("./src/crs-loader.html", "./dist/crs-loader.html", minimize);
+await packageFile("./src/crs-loader.js", "./dist/crs-loader.js", "js", "esm", minimize);
+await packageFile("./src/crs-router.js", "./dist/crs-router.js", "js", "esm", minimize);
+await packageFile("./src/crs-static-provider.js", "./dist/crs-static-provider.js", "js", "esm", minimize);
+await packageFile("./src/crs-url-provider.js", "./dist/crs-url-provider.js", "js", "esm", minimize);
+await packageFile("./src/crs-utils.js", "./dist/crs-utils.js", "js", "esm", minimize);
 
 Deno.exit(0);

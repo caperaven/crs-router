@@ -1,1 +1,53 @@
-import{getHashParameters as h}from"./crs-utils.js";class n{constructor(e){this._router=e,this._hashChangedHandler=this._hashChanged.bind(this),window.addEventListener("hashchange",this._hashChangedHandler,!1);const s=window.location.hash.trim();s=="#"||s==""?this._setUrl(this._router.routesDef.default).then(()=>this._router.goto(this._router.routesDef.default)):this._hashChanged({oldURL:"",newURL:window.location.href})}dispose(){delete this._router}async _hashChanged(e){if(this.mute==!0)return delete this.mute;const s=await h(this._getHashFromString(e.oldURL)),t=await h(this._getHashFromString(e.newURL));if(this._router.viewModel&&this._router.viewModel.canLeave&&this._router.viewModel.canLeave(t.hash,t.parameters)==!1)return this.mute=!0,window.location.hash=s.url;this._router.viewModel&&s.hash==t.hash?(this._router.viewModel.parameters=t.parameters,this._router.viewModel.parametersChanged&&this._router.viewModel.parametersChanged(this._router.viewModel.parameters)):this._router.goto(t.hash,t.parameters,"hash")}async _setUrl(e){const s=this._router.routesDef.routes.find(r=>r.view===e);let t=[s.hash];if(s.parameters){t.push("?");for(let[r,a]of Object.entries(s.parameters))t.push(`${r}=${a}`)}window.location.hash=t.join("")}_getHashFromString(e){return e.substr(e.indexOf("#"),e.length)}}export{n as NavigationProvider};
+import { getHashParameters } from "./crs-utils.js";
+class NavigationProvider {
+  constructor(router) {
+    this._router = router;
+    this._hashChangedHandler = this._hashChanged.bind(this);
+    window.addEventListener("hashchange", this._hashChangedHandler, false);
+    const hash = window.location.hash.trim();
+    if (hash == "#" || hash == "") {
+      this._setUrl(this._router.routesDef.default).then(() => this._router.goto(this._router.routesDef.default));
+    } else {
+      this._hashChanged({
+        oldURL: "",
+        newURL: window.location.href
+      });
+    }
+  }
+  dispose() {
+    delete this._router;
+  }
+  async _hashChanged(event) {
+    if (this.mute == true)
+      return delete this.mute;
+    const oldHashParts = await getHashParameters(this._getHashFromString(event.oldURL));
+    const newHashParts = await getHashParameters(this._getHashFromString(event.newURL));
+    if (this._router.viewModel && this._router.viewModel.canLeave && this._router.viewModel.canLeave(newHashParts.hash, newHashParts.parameters) == false) {
+      this.mute = true;
+      return window.location.hash = oldHashParts.url;
+    }
+    if (this._router.viewModel && oldHashParts.hash == newHashParts.hash) {
+      this._router.viewModel.parameters = newHashParts.parameters;
+      this._router.viewModel.parametersChanged && this._router.viewModel.parametersChanged(this._router.viewModel.parameters);
+    } else {
+      this._router.goto(newHashParts.hash, newHashParts.parameters, "hash");
+    }
+  }
+  async _setUrl(view) {
+    const def = this._router.routesDef.routes.find((item) => item.view === view);
+    let hash = [def.hash];
+    if (def.parameters) {
+      hash.push("?");
+      for (let [key, value] of Object.entries(def.parameters)) {
+        hash.push(`${key}=${value}`);
+      }
+    }
+    window.location.hash = hash.join("");
+  }
+  _getHashFromString(url) {
+    return url.substr(url.indexOf("#"), url.length);
+  }
+}
+export {
+  NavigationProvider
+};
