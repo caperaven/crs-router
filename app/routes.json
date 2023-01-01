@@ -35,7 +35,7 @@
       "title": "Static",
       "hash": "#static",
       "view": "static",
-      "html-only": true,
+      "htmlOnly": true,
       "js": [
         "/components/test-component.js"
       ]

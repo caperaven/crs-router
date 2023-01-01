@@ -1,9 +1,10 @@
 import {getParameters} from "./parameters.js";
 import {findRoute} from "./routes.js";
-import {getHTML} from "./html.js";
+import {loadHTML, loadViewModel} from "./loaders.js";
 
 class Router extends HTMLElement {
     #data;
+    #viewModel;
     #hashChangedHandler = this.#hashChanged.bind(this);
 
     async connectedCallback() {
@@ -29,11 +30,41 @@ class Router extends HTMLElement {
     }
 
     async #hashChanged() {
+        if (this.#data["auto-hide"] == true) {
+            this.style.visibility = "hidden";
+        }
+
+        await this.#disposeViewModel();
+
         const parameters = await getParameters();
         const route = await findRoute(this.#data, parameters.hash);
-        const html = await getHTML(route?.view || "404", this.#data.root);
+        const html = await loadHTML(route?.view || "404", this.#data.root, route["hasStyle"] === true);
+
+        for (const jsPath of route["js"] || []) {
+            await import(jsPath);
+        }
 
         this.innerHTML = html;
+
+        if (route["htmlOnly"] === true) {
+            this.style.visibility = "";
+            return;
+        }
+
+        this.#viewModel = await loadViewModel(route?.view, this.#data.root, this);
+
+        requestAnimationFrame(async () => {
+            await this.#viewModel?.connectedCallback?.();
+            this.style.visibility = "";
+        })
+    }
+
+    async #disposeViewModel() {
+        if (this.#viewModel != null) {
+            delete this.#viewModel.element;
+            await this.#viewModel.disconnectedCallback?.();
+            this.#viewModel = null;
+        }
     }
 }
 
