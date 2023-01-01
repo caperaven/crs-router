@@ -1,5 +1,5 @@
 import { assert, assertEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
-import { loadHTML } from "./../src/loaders.js";
+import { loadHTML, loadViewModel } from "./../src/loaders.js";
 
 globalThis.fetch = async (url) => {
     let result = "";
