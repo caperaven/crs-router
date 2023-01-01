@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/old/crs-router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/parameters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/package.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/package.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/crs-loader.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-loader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/crs-loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/crs-static-provider.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-static-provider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/crs-url-provider.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-url-provider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/crs-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crs-loader.html" beforeDir="false" afterPath="$PROJECT_DIR$/old/crs-loader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crs-loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/old/crs-loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crs-static-provider.js" beforeDir="false" afterPath="$PROJECT_DIR$/old/crs-static-provider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crs-url-provider.js" beforeDir="false" afterPath="$PROJECT_DIR$/old/crs-url-provider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crs-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/old/crs-utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +45,25 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/caperaven projects/crs-router&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "F:/caperaven projects/crs-router/old",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\caperaven projects\crs-router\old" />
       <recent name="F:\caperaven projects\crs-router\build" />
       <recent name="D:\projects\caperaven-projects\crs-router" />
       <recent name="D:\projects\caperaven-projects\crs-router\build" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\caperaven projects\crs-router\old" />
     </key>
   </component>
   <component name="RunManager" selected="Deno.Deno: package.js">
@@ -229,6 +236,7 @@
       <workItem from="1666953558676" duration="650000" />
       <workItem from="1670172593706" duration="285000" />
       <workItem from="1670172981673" duration="19000" />
+      <workItem from="1672559351909" duration="4837000" />
     </task>
     <task id="LOCAL-00004" summary="initial">
       <created>1567777605433</created>

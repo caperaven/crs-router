@@ -6,7 +6,7 @@
   "routes": [
     {
       "title": "Welcome",
-      "hash": "#wel",
+      "hash": "#welcome",
       "view": "welcome",
       "hasStyle": true,
       "parameters": {
