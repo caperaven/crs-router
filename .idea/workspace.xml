@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/loaders.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/loaders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loaders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/loaders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/component-mock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/crs-router.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/crs-static-provider.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/crs-url-provider.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/crs-utils.js.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/dom-mocks.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +63,12 @@
       <recent name="F:\caperaven projects\crs-router\old" />
     </key>
   </component>
-  <component name="RunManager" selected="Deno.Deno: package.js">
+  <component name="RunManager" selected="Deno.Deno: loaders.test.js">
+    <configuration name="Deno: loaders.test.js" type="DenoConfigurationType" temporary="true" nameIsGenerated="true" inputPath="$PROJECT_DIR$/test/loaders.test.js" programParameters="test" workingDirectory="$PROJECT_DIR$/test">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Deno: package.js" type="DenoConfigurationType" nameIsGenerated="true" inputPath="$PROJECT_DIR$/build/package.js" programParameters="run --allow-read --allow-write --allow-env --allow-run">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -103,16 +113,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="publish" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="publish" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -125,21 +125,21 @@
     </configuration>
     <list>
       <item itemvalue="Deno.Deno: package.js" />
+      <item itemvalue="Deno.Deno: loaders.test.js" />
       <item itemvalue="JavaScript Debug.index.html (1)" />
       <item itemvalue="Jest.bmw-url-provider _hashChanged same url" />
       <item itemvalue="Node.js.publish" />
       <item itemvalue="npm.test" />
-      <item itemvalue="npm.publish" />
       <item itemvalue="npm.bundle" />
       <item itemvalue="npm.build-publish" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Deno.Deno: loaders.test.js" />
         <item itemvalue="npm.bundle" />
         <item itemvalue="npm.build-publish" />
         <item itemvalue="npm.test" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
-        <item itemvalue="npm.publish" />
       </list>
     </recent_temporary>
   </component>
@@ -228,14 +228,7 @@
       <workItem from="1666953558676" duration="650000" />
       <workItem from="1670172593706" duration="285000" />
       <workItem from="1670172981673" duration="19000" />
-      <workItem from="1672559351909" duration="7258000" />
-    </task>
-    <task id="LOCAL-00005" summary="initial">
-      <created>1567778919735</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1567778919735</updated>
+      <workItem from="1672559351909" duration="8130000" />
     </task>
     <task id="LOCAL-00006" summary="adding sub routes examples">
       <created>1567789438476</created>
@@ -573,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672564321334</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="refactor init">
+      <created>1672566695479</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1672566695479</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

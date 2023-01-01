@@ -3,8 +3,8 @@ export async function loadHTML(view, root, hasStyle) {
     const stylePath = `/styles/views/${view}.css`;
 
     const html = await fetch(path).then(result => result.text());
-    const css = hasStyle === false ? "" : await fetch(stylePath).then(result => result.text());
-    return `<style>${css}</style>${html}`;
+    const css = hasStyle === false ? "" : `<style>${await fetch(stylePath).then(result => result.text())}</style>`;
+    return `${css}${html}`;
 }
 
 export async function loadViewModel(view, root, element) {
