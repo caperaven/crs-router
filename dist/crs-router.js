@@ -1,129 +1,118 @@
-import { getHashParameters, getRouteParameters } from "./crs-utils.js";
-import "./crs-loader.js";
+// deno-fmt-ignore-file
+// deno-lint-ignore-file
+// This code was bundled using `deno bundle` and it's not recommended to edit it manually
+
+async function getParameters() {
+    if (window.location.hash.indexOf("?") !== -1) {
+        return getQueriedParameters();
+    }
+    if (window.location.hash.indexOf("/") !== -1) {
+        return getSlashedParameters();
+    }
+    return {
+        hash: window.location.hash,
+        parameters: {}
+    };
+}
+function getQueriedParameters() {
+    const parts = window.location.hash.split("?");
+    const result = {
+        hash: parts[0],
+        parameters: {}
+    };
+    if (parts.length > 1) {
+        parseParameters(result, parts[1]);
+    }
+    return result;
+}
+function parseParameters(result, url) {
+    const parts = url.split("&");
+    for (const part of parts){
+        if (part.indexOf("=") === -1) {
+            result.parameters[part] = "";
+            continue;
+        }
+        const property = part.split("=");
+        result.parameters[property[0]] = property[1];
+    }
+}
+function getSlashedParameters() {
+    const parts = window.location.hash.split("/");
+    const result = {
+        hash: parts[0],
+        parameters: {}
+    };
+    for(let i = 1; i < parts.length - 1; i += 2){
+        result.parameters[parts[i]] = parts[i + 1];
+    }
+    return result;
+}
+async function findRoute(data, hash) {
+    return data.routes.find((item)=>item.hash === hash);
+}
+async function loadHTML(view, root, hasStyle) {
+    const path = `/${root}/${view}/${view}.html`;
+    const stylePath = `/styles/views/${view}.css`;
+    const html = await fetch(path).then((result)=>result.text());
+    const css = hasStyle === false ? "" : `<style>${await fetch(stylePath).then((result)=>result.text())}</style>`;
+    return `${css}${html}`;
+}
+async function loadViewModel(view, root, element) {
+    const path = `/${root}/${view}/${view}.js`;
+    const instance = new (await import(path)).default();
+    instance.element = element;
+    return instance;
+}
 class Router extends HTMLElement {
-  async connectedCallback() {
-    this._loader = document.createElement("crs-loader");
-    this.showLoader(false);
-    document.documentElement.appendChild(this._loader);
-    await this._loadRoutes();
-    const providerModule = this.routesDef["auto-nav"] == true ? "./crs-url-provider.js" : "./crs-static-provider.js";
-    const module = await import(providerModule);
-    this._provider = new module.NavigationProvider(this);
-    requestAnimationFrame(() => {
-      this._rect = this.getBoundingClientRect();
-      this._loader.style.left = `${this._rect.width / 2 - 30}px`;
-      this._loader.style.top = `${this._rect.top + 100}px`;
-    });
-    this.dispatchEvent(new CustomEvent("ready"));
-  }
-  disconnectedCallback() {
-    this.routesDef = null;
-    this._provider.dispose();
-    this._provider = null;
-    this._loader = null;
-    this._rect = null;
-  }
-  showLoader(visible) {
-    this._loader.style.display = visible == true ? "" : "none";
-  }
-  async goto(view, parameters, prop = "view") {
-    let loading = true;
-    const timeout = setTimeout(() => {
-      clearTimeout(timeout);
-      if (loading == true) {
-        this.showLoader(true);
-      }
-    }, 200);
-    const fn = view.indexOf("/") == -1 ? getHashParameters : getRouteParameters;
-    if (view.indexOf("/") != -1) {
-      view = view.split("/")[0];
+    #data;
+    #viewModel;
+    #hashChangedHandler = this.#hashChanged.bind(this);
+    async connectedCallback() {
+        await this.#loadRoutes();
+        window.addEventListener("hashchange", this.#hashChangedHandler);
+        if (window.location.href.indexOf("#") === -1) {
+            window.location.href = `#${this.#data.default}`;
+        } else {
+            await this.#hashChanged();
+        }
     }
-    const def = this.routesDef.routes.find((item) => item[prop] === view);
-    if (def == null) {
-      return this._loadView({
-        "title": "404",
-        "hash": "#404",
-        "view": "404",
-        "html-only": true
-      });
+    async disconnectedCallback() {
+        window.removeEventListener("hashchange", this.#hashChangedHandler);
+        this.#data = null;
     }
-    await this._loadView(def);
-    if (this.viewModel != null) {
-      this.viewModel["element"] = this;
-      this.viewModel.parameters = parameters || await fn(window.location.hash, def).parameters;
-      this.viewModel.connectedCallback && await this.viewModel.connectedCallback();
-      if (this.viewModel.parameters != null) {
-        this.viewModel.parametersChanged && this.viewModel.parametersChanged(this.viewModel.parameters);
-      }
-      this.viewModel.showScreen && this.viewModel.showScreen();
+    async #loadRoutes() {
+        const path = this.getAttribute("routes") || "/app/routes.json";
+        this.#data = await fetch(path).then((result)=>result.json());
     }
-    loading = false;
-    this.showLoader(false);
-  }
-  async _loadRoutes() {
-    const path = this.getAttribute("routes") || "/app/routes.json";
-    return fetch(path).then((result) => result.text()).then((text) => this.routesDef = JSON.parse(text));
-  }
-  async _loadView(def) {
-    const prefix = document.body.dataset.appPath || "";
-    if (this.routesDef["auto-hide"] == true) {
-      this.style.visibility = "hidden";
+    async #hashChanged() {
+        if (this.#data["auto-hide"] == true) {
+            this.style.visibility = "hidden";
+        }
+        await this.#disposeViewModel();
+        const parameters = await getParameters();
+        const route = await findRoute(this.#data, parameters.hash);
+        const html = await loadHTML(route?.view || "404", this.#data.root, route["hasStyle"] === true);
+        for (const jsPath of route["js"] || []){
+            await import(jsPath);
+        }
+        this.innerHTML = html;
+        if (route["htmlOnly"] === true) {
+            this.style.visibility = "";
+            return;
+        }
+        this.#viewModel = await loadViewModel(route?.view, this.#data.root, this);
+        requestAnimationFrame(async ()=>{
+            this.#viewModel.resources = parameters;
+            await this.#viewModel?.connectedCallback?.();
+            this.style.visibility = "";
+        });
     }
-    if (this.viewModel != null) {
-      this.viewModel.disconnectedCallback && this.viewModel.disconnectedCallback();
-      this.viewDisposedCallback && this.viewDisposedCallback(this.viewModel);
-      delete this.viewModel.element;
-      delete this.viewModel;
+    async #disposeViewModel() {
+        if (this.#viewModel != null) {
+            delete this.#viewModel.element;
+            await this.#viewModel.disconnectedCallback?.();
+            this.#viewModel = null;
+        }
     }
-    const root = this.routesDef.root || "app";
-    let html;
-    let style = "";
-    const promises = [];
-    let resObj = null;
-    if (def.resources != null) {
-      resObj = {};
-      for (let resource of def.resources) {
-        promises.push(fetch(`${prefix}/${root}/${def.view}/${resource.path}`).then((result) => result[resource.type || "text"]()).then((bytes) => resObj[resource.name] = bytes));
-      }
-    }
-    if (def.js != null) {
-      promises.push(this._loadTempJS(def.js));
-    }
-    promises.push(fetch(`${prefix}/${root}/${def.view}/${def.view}.html`).then((result) => result.text()).then((text) => html = text));
-    if (def.hasStyle === true) {
-      promises.push(fetch(`${prefix}/styles/views/${def.view}.css`).then((result) => result.text()).then((text) => style = `<style>${text}</style>`));
-    }
-    await Promise.all(promises).then(async () => {
-      this.innerHTML = `${style}
-${html}`;
-      if (def["html-only"] != true) {
-        const module = await import(`${prefix}/${root}/${def.view}/${def.view}.js`);
-        const instance = new module.default(this);
-        this.viewModel = this.viewCreatedCallback != null ? this.viewCreatedCallback(instance) : instance;
-        this.viewModel.element = this;
-        this.viewModel.title = def.title;
-      } else {
-        this.style.visibility = "";
-      }
-      if (resObj != null) {
-        this.viewModel.resources = resObj;
-      }
-    });
-  }
-  async _loadTempJS(urlCollection) {
-    for (let url of urlCollection) {
-      if (document.head.querySelector(`script[src="${url}"]`)) {
-        continue;
-      }
-      const script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src = url;
-      script.type = "module";
-      document.head.appendChild(script);
-    }
-  }
 }
 customElements.define("crs-router", Router);
-export {
-  Router
-};

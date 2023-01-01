@@ -4,9 +4,7 @@
     "description": "Zero dependency router web component for framework free applications",
     "main": "index.js",
     "scripts": {
-        "test": "jest",
-        "bundle": "deno run --allow-read --allow-write --allow-env --allow-run ./build/package.js",
-        "build-publish": "node build/publish.js"
+        "bundle": "deno run --allow-read --allow-write --allow-env --allow-run ./build/package.js"
     },
     "keywords": [
         "webcomponent",
@@ -14,20 +12,5 @@
     ],
     "author": "Johan Rabie",
     "homepage": "https://caperaven.co.za/",
-    "license": "ISC",
-    "devDependencies": {
-        "@babel/core": "^7.6.0",
-        "@babel/plugin-proposal-throw-expressions": "^7.2.0",
-        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-        "@babel/preset-env": "^7.6.0",
-        "@types/jest": "^24.0.18",
-        "babel-jest": "^24.9.0",
-        "crs-binding": "0.0.189",
-        "glob": "^7.1.4",
-        "html-minifier": "^4.0.0",
-        "jest": "^24.9.0",
-        "mkdirp": "^0.5.1",
-        "rollup": "^1.23.0",
-        "rollup-plugin-terser": "^5.1.2"
-    }
+    "license": "MIT"
 }

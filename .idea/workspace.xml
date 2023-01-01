@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/parameters.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/loaders.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/loaders.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/package.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/package.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/crs-loader.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/crs-loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/crs-static-provider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/crs-url-provider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/crs-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +64,7 @@
       <recent name="D:\projects\caperaven-projects\crs-router\build" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\caperaven projects\crs-router\dist" />
       <recent name="F:\caperaven projects\crs-router\old" />
     </key>
   </component>
@@ -131,9 +142,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.bundle" />
         <item itemvalue="Deno.Deno: parameters.test.js" />
         <item itemvalue="Deno.Deno: loaders.test.js" />
-        <item itemvalue="npm.bundle" />
         <item itemvalue="npm.build-publish" />
         <item itemvalue="npm.test" />
       </list>
@@ -224,14 +235,7 @@
       <workItem from="1666953558676" duration="650000" />
       <workItem from="1670172593706" duration="285000" />
       <workItem from="1670172981673" duration="19000" />
-      <workItem from="1672559351909" duration="9085000" />
-    </task>
-    <task id="LOCAL-00007" summary="adding sub routes examples">
-      <created>1567793820935</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1567793820935</updated>
+      <workItem from="1672559351909" duration="10184000" />
     </task>
     <task id="LOCAL-00008" summary="added tests">
       <created>1567851387236</created>
@@ -569,7 +573,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672567573133</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="refactor init">
+      <created>1672568549168</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1672568549168</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
