@@ -38,15 +38,17 @@ class Router extends HTMLElement {
 
         const parameters = await getParameters();
         const route = await findRoute(this.#data, parameters.hash);
-        const html = await loadHTML(route?.view || "404", this.#data.root, route["hasStyle"] === true);
-
-        for (const jsPath of route["js"] || []) {
-            await import(jsPath);
-        }
+        const html = await loadHTML(route?.view || "404", this.#data.root, route?.["hasStyle"] === true);
 
         this.innerHTML = html;
 
-        if (route["htmlOnly"] === true) {
+        if (route == null) return;
+
+        for (const jsPath of route?.["js"] || []) {
+            await import(jsPath);
+        }
+
+        if (route?.["htmlOnly"] === true) {
             this.style.visibility = "";
             return;
         }
