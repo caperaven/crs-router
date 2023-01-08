@@ -4,7 +4,7 @@
     "description": "Zero dependency router web component for framework free applications",
     "main": "index.js",
     "scripts": {
-        "bundle": "deno run --allow-read --allow-write --allow-env --allow-run ./build/package.js"
+        "bundle": "deno bundle src/crs-router.js dist/crs-router.js"
     },
     "keywords": [
         "webcomponent",

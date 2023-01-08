@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="acdce248-7673-4ae5-ad78-7cd47f88687f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crs-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/crs-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/crs-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,14 +229,8 @@
       <workItem from="1672570389231" duration="440000" />
       <workItem from="1672578492581" duration="703000" />
       <workItem from="1672643337190" duration="15000" />
-      <workItem from="1673214634285" duration="21000" />
-    </task>
-    <task id="LOCAL-00011" summary="added tests">
-      <created>1567869787812</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1567869787814</updated>
+      <workItem from="1673214634285" duration="99000" />
+      <workItem from="1673214785249" duration="167000" />
     </task>
     <task id="LOCAL-00012" summary="added tests">
       <created>1567873408523</created>
@@ -573,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672570831736</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="add title setting for router">
+      <created>1673214715760</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1673214715760</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +613,8 @@
     <MESSAGE value="add support for electron" />
     <MESSAGE value="add dist build script" />
     <MESSAGE value="refactor init" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor init" />
+    <MESSAGE value="add title setting for router" />
+    <option name="LAST_COMMIT_MESSAGE" value="add title setting for router" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
