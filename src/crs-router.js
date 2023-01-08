@@ -54,7 +54,7 @@ class Router extends HTMLElement {
         }
 
         this.#viewModel = await loadViewModel(route?.view, this.#data.root, this);
-
+        this.#viewModel.title = route.title;
         requestAnimationFrame(async () => {
             this.#viewModel.resources = parameters;
             await this.#viewModel?.connectedCallback?.();
